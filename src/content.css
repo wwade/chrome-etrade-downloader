@@ -1,0 +1,41 @@
+#codex-etrade-downloader {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 420px;
+  padding: 10px 12px;
+  border: 1px solid #b7c2d0;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1f2937;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18);
+  font: 13px/1.35 Arial, sans-serif;
+}
+
+#codex-etrade-downloader button {
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+  background: #0b5cab;
+  color: #ffffff;
+  cursor: pointer;
+  font: 600 13px/1 Arial, sans-serif;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+
+#codex-etrade-downloader button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+#codex-etrade-downloader-status {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

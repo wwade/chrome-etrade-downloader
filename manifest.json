@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "E*TRADE Confirmation Downloader",
+  "version": "1.0.5",
+  "description": "Downloads visible E*TRADE purchase, release, and trade confirmation PDFs from the current page.",
+  "permissions": ["scripting", "activeTab", "downloads", "tabs"],
+  "host_permissions": [
+    "https://*.etrade.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.etrade.com/*"
+      ],
+      "js": ["src/content.js"],
+      "css": ["src/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "E*TRADE Confirmation Downloader"
+  }
+}
